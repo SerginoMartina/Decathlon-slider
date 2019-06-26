@@ -1,0 +1,813 @@
+/*
+	Theme Name: Sergino Martina
+	Theme URI: local
+	Description: Decathlon Testcase 
+	Version: 1.0
+	Author: Sergino Martina
+*/
+
+/*------------------------------------*\
+    ROWS
+\*------------------------------------*/
+
+.row-padding-sm
+{
+	padding: 25px 0px;
+}
+
+.row-padding-md
+{
+	padding: 50px 0px;
+}
+
+.row-padding-lg
+{
+	padding: 100px 0px;
+}
+
+.white
+{
+	background: #fff;
+}
+
+.light-gray
+{
+	background: #fafafa;
+}
+
+.gray
+{
+	background: #f1f1f1;
+}
+
+.row-margin-lg {
+
+    margin-top:100px;
+    margin-bottom:50px;
+
+}
+
+.remove-margin-sm {
+
+    margin-left: -25px;
+    margin-right: 25px;
+
+}
+
+
+
+/*------------------------------------*\
+    COLORS
+\*------------------------------------*/
+
+
+.decathlon-blue {
+
+color: #0082C3;
+
+}
+
+/*------------------------------------*\
+    ANIMATION Section 1 - homepage
+\*------------------------------------*/
+
+    /* make keyframes that tell the start state and the end state of our object */
+    @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.one {
+
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.4s;
+
+    /* background image from colomn 1*/
+    background-image: url(../IMG/voetbal-bg.jpg);
+    background-color: #cccccc; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.two {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay:1.2s;
+    animation-delay: 0.8s;
+
+    /* background image from colomn 2*/
+    background-image: url(../IMG/kamperen-bg.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.three {
+     -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.2s;
+
+    /* background image from colomn 3*/
+    background-image: url(../IMG/vechtsport-bg.jpg);
+    background-color: #cccccc;  
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.four {
+    -webkit-animation-delay: 2.0s;
+    -moz-animation-delay: 2.0s;
+    animation-delay: 1.6s;
+
+    /* background image from colomn 4*/
+    background-image: url(../IMG/fietsen-bg.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.box {
+    /*---make a basic box for sport catogories ---*/    
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin: 10px;
+    float: left;
+    border: none;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+
+  .img-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+  .img-item img {
+    max-width: 100%;
+    
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  
+  .img-item:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .fade-in-2 {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    animation-duration:3s;
+}
+
+
+/*------------------------------------*\
+    TEXTSTYLES
+\*------------------------------------*/
+
+
+.titel {
+
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+.ondertitel {
+
+    font-weight: 400;
+    font-style: italic;
+    
+}
+
+
+.uppercase {
+
+    text-transform: uppercase;
+
+}
+
+.h5, h5 {
+
+    font-size: 1.15rem;
+
+}
+
+.h6, h6 {
+
+    font-size: 1rem;
+
+}
+
+.rotateText {
+    /* Safari */
+    -webkit-transform: rotate(-2deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-2deg);
+
+    /* IE */
+    -ms-transform: rotate(-2deg);
+
+    /* Opera */
+    -o-transform: rotate(-2deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.3);
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+/*------------------------------------*\
+    Buttons
+\*------------------------------------*/
+
+
+.btn.btn-primary.btn-lg {
+    padding: 3px 63px 4px 20px;
+    margin: 28px 0px 0px 130px;
+    color: black;
+    background-image: url(../IMG/button.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btn.btn-primary.btn-lg:hover {
+
+    background-image: url(../IMG/button-hover.png);
+    background-color: transparent;   
+    background-repeat: no-repeat;
+    background-size: contain;    
+
+}
+
+
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.btn-primary {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-primary:hover {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+/*------------------------------------*\
+    CTA
+\*------------------------------------*/
+
+
+.padding-cta {
+
+    padding: 20px 10px;
+    margin-right: 15px;
+
+}
+
+
+.cta-bg-one {
+    background-image: url(../IMG/CTA-bg.jpg);
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.01pt solid black;
+}
+
+
+/*------------------------------------*\
+    ANIMATION Section 3 - slider on homepage
+\*------------------------------------*/
+
+.slideshow-container {
+
+    width: 1108px;
+    position: relative;
+    margin: auto;
+
+}
+
+.row-margin-slider {
+
+    margin-top:100px;
+    margin-bottom:50px;
+}
+
+.slide-one {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/1.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+
+}
+
+
+.slide-two {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/2.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+
+}
+
+.slide-three {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/3.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+
+}
+
+.slide-four {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/4.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+
+}
+
+.slide-five {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/5.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-six {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/6.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-seven {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/7.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-eight {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/8.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-nine {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/9.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-ten {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/10.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-eleven {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/11.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+.slide-twelve {
+
+    padding: 0px 30px 30px 30px;
+    background-image: url(../SLIDER/EVENTS/12.jpg);
+    background-color: #cccccc;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:0px;
+}
+
+
+.day {
+
+    font-size: 180px;
+    margin-top: -45px;
+    margin-left: 80px;
+    color: white;
+    opacity: 0.8;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.month {
+
+    font-size: 55px;
+    margin-top: -50px;
+    margin-left: 65px;
+    color: white;
+    opacity: 0.5;
+    font-weight: 300;
+    opacity: 0.8;
+    font-style: italic;
+    text-align: center;
+
+}
+
+
+.ondertitel-slider {
+
+    font-size: 18px;
+    padding-right: 200px;
+    line-height: 1.5;
+    font-weight: 200;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+
+}
+
+.titel-slider {
+
+    font-weight: bold;
+    color: white;
+    padding-top: 65px;
+
+}
+
+.link-slider {
+
+    color: white !important;
+
+}
+
+.left-col-slider {
+    padding-left: 50px;
+}
+
+.right-col-slider {
+
+    margin-top: 70px;
+
+}
+
+.day-slider {
+
+    width: 1120px;
+    overflow: scroll;
+    display: table-cell;
+    margin-left: 1px;
+
+
+}
+
+.day-button {
+    width: 100%;
+    height: 130px;
+    padding: 5px;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.day-button:hover {
+    -moz-box-shadow:    inset 0 0 10px #0000002a;
+    -webkit-box-shadow: inset 0 0 10px #0000002a;
+    box-shadow:         inset 0 0 10px #0000002a;
+
+}
+
+.active {
+        box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 12px -4px rgba(31, 73, 125, 0.1), -15px 0 14px -4px rgba(31, 73, 125, 0.1);
+        z-index: 999;
+
+}
+
+
+.thin-border {
+
+    border: 1px solid #dee2e6 !important;
+    margin-bottom: 150px;
+
+}
+
+.outdated {
+
+    opacity: 0.3;
+
+}
+
+.slider-day {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #0082C3;
+}
+
+.slider-month {
+    font-size: 25px;
+    margin-top: -10px;
+    font-weight: 300;
+    color: #0082C3;
+}
+
+.lower-info-slider {
+    margin-top: 70px;
+}
+
+.link-slider {
+    font-size: 19px;
+}
+
+.location-slider {
+    font-size: 14px;
+    padding: 10px 0px;
+    background: white;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    color: #0082C3;
+}
+
+.catogory-slider {
+    font-size: 14px;
+    padding: 10px 0px;
+    background: white;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 30px;
+    color: #0082C3;
+    margin-left:-15px;
+}
+
+.numbers{
+position: absolute;
+top: 0;
+color: #f2f2f2;
+padding: 8px 12px;
+font-size: 12px;
+}
+.myslides{
+display: none;
+}
+
+.prev, .next {
+
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+        padding-left: 16px;
+    padding-left: 16px;
+    margin-top: -22px;
+    border-radius: 30px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+    z-index: 99999;
+    margin-left: -50px;
+    box-shadow: 2px 2px 6px #000000;
+    width: 60px;
+    padding-left: 25px;
+
+}
+
+.prev:hover, .next:hover {
+    background-color: whitesmoke !important;
+}
+
+.next {
+
+    right: 0;
+    margin-right: -25px;
+    border-radius: 40px;
+    padding-left: 25px;
+
+}
+
+.prev {
+
+    padding-left: 25px;
+
+}
+
+.prev:hover,.next:hover{
+background-color: rgba(0,0,0,0.8);
+}
+.caption{
+text-align: center;
+position: absolute;
+bottom: 8px;
+width: 100%;
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 22px;
+}
+
+.dots {
+
+    width: 110px;
+    background: transparent;
+        background-color: transparent;
+    background-color: transparent;
+    display: table-cell;
+    cursor: pointer;
+    margin-top: -43px;
+
+}
+.fade{
+animation-name:fade;
+animation-duration:1.5s;
+}
+@keyframes fade{
+from {opacity: 0.4;}
+to {opacity: 1;}
+}
+.active, .dot:hover {
+background-color: #333;
+}
+
+img {
+    width: 100%;
+}
+
+.fade:not(.show) {
+
+    opacity: 1 !important;
+
+}
+
+.active, .dot:hover {
+
+    background-color: transparent;
+
+}
+
+.active {
+
+    box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 12px -4px rgba(31, 73, 125, 0.1), -15px 0 14px -4px rgba(31, 73, 125, 0.1);
+    z-index: 999;
+
+}
+
+
+
+.next {
+
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: -20px;
+    border-radius: 30px;
+
+}
+
+.col-1 {
+
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 100%;
+
+}
+
+
+
+/*------------------------------------*\
+    Icons
+\*------------------------------------*/
+
+.fa, .fas {
+
+    font-weight: 900;
+    margin-right: 5px;
+
+}
+
+.right-arrow {
+
+    color: white;
+    font-size: 50px;
+    margin-left: 680px;
+    text-shadow: 3px 3px 16px rgba(39,38,52,0.3);
+
+}
+
+
+.row.navigation-arrows-slider {
+
+    margin-top: 200px;
+
+}
+
+.left-arrow {
+    
+    margin-left: -30px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px 16px rgba(39,38,52,0.3);
+}
+
+.left-arrow {
+    background-color: transparent;
+    border: none;
+}
+
+.right-arrow {
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+
+
+
+}
+
